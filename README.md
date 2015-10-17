@@ -1,8 +1,8 @@
 # Angularjs-best-practices
-#####My favourite angularjs developement  best practices :
+#####My favourite tips for angularjs developement:
 
 
-1. use controller as syntax. Never pollute any value on $scope/scope
+1. use controller as syntax. Never pollute any value on $scope/scope.
 
 2. Always use bindToController when using isolate scope
 
@@ -25,3 +25,5 @@
 11. Use one way binding when ever possible.
 
 12. Setup environment variable like devlopment production configuration path,mode by using gulp-ng-constants plugin
+
+13. Use Angular Batarang and ng-inspector browser plugin for improve our development productivity.
