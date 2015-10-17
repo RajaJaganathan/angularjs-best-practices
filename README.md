@@ -2,28 +2,34 @@
 #####My favourite tips for angularjs developement:
 
 
-1. use controller as syntax. Never pollute any value on $scope/scope.
+* Use always controller as syntax and never pollute any value/property on $scope/scope.
 
-2. Always use bindToController when using isolate scope
+* Don't pollute variable on controller' vm and $scope which are not use/accessed from template.
 
-3. Use fully controller as syntax like at $scope.$watch(vm.foo, function(){});
+* Always use bindToController when using isolate scope
 
-4. Use $digest methods instead of $apply when ever possible
+* Use fully controller as syntax like at $scope.$watch(vm.foo, function(){});
 
-5. In controller never attached to variable and method which are not used in angular template
+* Use $digest methods instead of $apply when ever possible
 
-6. Use directive controller as API
+* In controller never attached to variable and method which are not used in angular template
 
-7. Controller should not aware of business logic and should be thin as much as possible
+* Use directive controller as API
 
-8. Controller shouldn't be shared with any service/controller etc..,
+* Controller should not aware of business logic and should be thin as much as possible
 
-9. Never use $parent().$parent() it hard to test it will break if we use ng-if, ng-include since it introduce new scope
+* Controller shouldn't be shared with any service/controller etc..,
 
-10. Use ng-message-exp for dynamic validation fields
+* Never use $parent().$parent() it hard to test it will break if we use ng-if, ng-include since it introduce new scope
 
-11. Use one way binding when ever possible.
+* Use ng-message-exp for dynamic validation fields
 
-12. Setup environment variable like devlopment production configuration path,mode by using gulp-ng-constants plugin
+* Use one way binding when ever possible.
 
-13. Use Angular Batarang and ng-inspector browser plugin for improve our development productivity.
+* Setup environment variable like devlopment production configuration path,mode by using gulp-ng-constants plugin
+
+* Use Angular Batarang and ng-inspector browser plugin for improve our development productivity.
+
+* Use asynEval in directive link method for initialize jquery plugins and get performance improvement.(http://www.bennadel.com/blog/2635-looking-at-how-scope-evalasync-affects-performance-in-angularjs-directives.htm)
+
+* Filter angular@1.3: Store filtered result with help of 'as' syntax in ng-repeat like ```<div ng-repeat="person in data | filter:query as results"></div> {{results.length}}``` 
