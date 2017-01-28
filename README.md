@@ -1,5 +1,7 @@
 # Angularjs-best-practices
-#####My favourite tips for angularjs developement:
+
+
+##Angularjs General Guideline:
 
 * Use always controller as syntax and never pollute any value/property on $scope/scope property.
 
@@ -20,6 +22,22 @@
 ```
 
 * Always use controller as syntax like at $scope.$watch(vm.foo, function(){});
+
+* In order to avoid number of variable declaration, group by features by using object literal syntax.
+
+```javascript
+        var firstName = 'John';
+        var lastName = 'Doe';
+        var age = 30;
+```
+
+```javascript
+        var person = {
+                firstName:'John',
+                lastName:'Doe',
+                age:30
+        };
+```
 
 * Use directive controller as API for directive.
 
