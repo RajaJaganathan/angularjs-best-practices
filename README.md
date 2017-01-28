@@ -85,4 +85,9 @@
     }]);
 ```
 
+* Avoid using $emit, $broadcast on $scope/$rootScope instead use event emitter libs such as Postal, Event Emitter, etc.
+
+```javascript
+app.const('appChannel', new EventEmitter());
+```
 
