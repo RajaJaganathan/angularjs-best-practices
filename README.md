@@ -9,7 +9,9 @@
 
 * Always use bindToController when using isolate scope for directive api.
 
-* Always use component instead of directive when ever possible. Following sceneraio are not fit in component api, ie, DOM manipulatation, Dynamic template compilation, restrict to attrs/class
+* Always enable ng-strict-di so that minification won't surprise at last moment.
+
+* Always use component instead of directive whenever possible. Following sceneraio are not fit in component api, ie, DOM manipulatation, Dynamic template compilation, restrict to attrs/class
 
 ```javascript
 
@@ -70,7 +72,7 @@
 
 * Avoid angular filter expression as much as possible. Instead invoke filter in controller. Costly operation because every single digest cycle filter invoked twice.
 
-* Use ng-if instead of ng-show/ng-hide when eer possible, angular does dirty checks for hidden elements too.
+* Use ng-if instead of ng-show/ng-hide whenever possible, angular does dirty checks for hidden elements too.
 
 * Always use 'track by' expression with ng-repeat to improve a performance. Use $index when collection has no unique fields.
 
@@ -83,6 +85,8 @@
         </div>
 
 ```
+
+* Use $watchCollection instead $watch with deep comparision flag whenever possible.
 
 * Use ngModelOptions and also inherited for all form fields so defer the digest cycle.
 
