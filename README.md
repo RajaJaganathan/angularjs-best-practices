@@ -72,6 +72,37 @@
 
 * Use ng-if instead of ng-show/ng-hide when eer possible, angular does dirty checks for hidden elements too.
 
+* Always use 'track by' expression with ng-repeat to improve a performance. Use $index when collection has no unique fields.
+
+```javascript
+        <div ng-repeat="model in collection track by model.id">
+          {{model.name}}
+        </div>
+        
+        <div ng-repeat="item in dataSource track by $index">  
+        </div>
+
+```
+
+* Use ngModelOptions and also inherited for all form fields so defer the digest cycle.
+
+```javascript
+
+        ng-model-options="{
+          updateOn: 'default blur',
+          debounce: { 'default': 500, 'blur': 0 }
+        }"
+
+```
+* Use $destroy to remove the event listeners from DOM and scope.
+
+```javascript
+        scope.$on("$destroy", function() {
+            element.off('click', windowClick);    
+            scope.$off('modalOpened',onModelOpened);
+       });
+
+```
 * Use component instead of directives with one way data binding.
 ``` javascript
         angular.component('counter', {
