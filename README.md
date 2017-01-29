@@ -92,10 +92,10 @@
 
 ```javascript
 
-        ng-model-options="{
+        ng-model-options={
           updateOn: 'default blur',
           debounce: { 'default': 500, 'blur': 0 }
-        }"
+        };
 
 ```
 * Use $destroy to remove the event listeners from DOM and scope.
