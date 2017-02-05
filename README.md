@@ -144,3 +144,4 @@
 app.const('appChannel', new EventEmitter());
 ```
 
+* Use angular translate once(https://github.com/ajwhite/angular-translate-once/blob/develop/src/translate-once.js) libary in order to avoid massive $watcher in application. 
