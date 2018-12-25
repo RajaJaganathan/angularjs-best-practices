@@ -1,7 +1,7 @@
 # Angularjs-best-practices
 
 
-##Angularjs General Guideline:
+### Angularjs General Guideline:
 
 * Use always controller as syntax and never pollute any value/property on $scope/scope property.
 
@@ -57,7 +57,7 @@
 
 * Filter angular@1.3: Store filtered result with help of 'as' syntax in ng-repeat like ```<div ng-repeat="person in data | filter:query as results"></div> {{results.length}}``` 
 
-## Angular 1.x Performance Guidelines:
+### Angular 1.x Performance Guidelines:
 
 * Always use one way binding by using ng-bind directive, binding expression like 
 
